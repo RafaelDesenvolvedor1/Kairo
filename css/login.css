@@ -1,0 +1,58 @@
+@import url("./global.css");
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.box-img {
+  background-color: var(--background-primary);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  font-family: var(--font-title);
+  margin-bottom: 2em;
+}
+
+.box-form {
+  flex: 1;
+  background-color: var(--background-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-form form {
+  width: 25em;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 4px 5px 5px -1px rgba(0, 0, 0, 0.38);
+}
+
+.box-form form input {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 700px) {
+  .box-img,
+  .box-form {
+    min-height: 100dvh;
+  }
+
+  .box-img::before {
+    content: "\2193";
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  .app-container {
+    display: block;
+  }
+}
