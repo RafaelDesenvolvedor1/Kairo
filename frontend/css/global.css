@@ -3,22 +3,34 @@
 :root {
     /* estilos de font */
     --font-title: "Montserrat", sans-serif;
-    --font-content:"Poppins", sans-serif;
+    --font-content: "Poppins", sans-serif;
     --color-primary: #1c1c1c;
-    --color-secondary:#f3f3f3;
+    --color-secondary: #f3f3f3;
 
     /* paleta de cores */
-    --background-primary:#ccc;
+    --background-primary: #ccc;
     --background-secondary: #e7e5e5;
 }
 
-body{
+body {
     width: 100%;
     min-height: 100vh;
     font-family: var(--font-content);
     color: var(--color-primary);
 }
 
-button:hover{
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background-secondary);
+}
+
+h1 {
+    font-family: var(--font-title);
+    margin-bottom: 2em;
+}
+
+button:hover {
     opacity: 0.9;
 }

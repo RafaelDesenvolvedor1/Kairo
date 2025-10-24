@@ -1,9 +1,3 @@
-@import url("./global.css");
-
-.app-container {
-  display: flex;
-  min-height: 100vh;
-}
 
 .box-img {
   background-color: var(--background-primary);
@@ -15,10 +9,7 @@
   position: relative;
 }
 
-h1 {
-  font-family: var(--font-title);
-  margin-bottom: 2em;
-}
+
 
 .box-form {
   flex: 1;
