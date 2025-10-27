@@ -16,7 +16,7 @@ class AppLogo extends HTMLElement{
                 }
 
             </style>
-            <h1>KAIRO</h1>
+            <h1 style="font-size:${this.getAttribute("size")};">KAIRO</h1>
         `
     }
 }

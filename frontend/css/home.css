@@ -1,14 +1,43 @@
-.app-container{
-    flex-direction: column;
+.app-container {
+  flex-direction: column;
 }
 
-.quick-access{
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    border: 1px solid;
-    border-radius: 1em;
+.quick-access {
+  width: 250px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  border: 1px solid;
+  border-radius: 1em;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+  background-color: var(--background-content);
+
+  text-decoration: none;
+  color: var(--color-primary);
+
+  transition: .3s ease-in-out;
+}
+
+.quick-access:not(:first-child){
+      margin-left: 1em;
+}
+
+.quick-access span {
+  font-size: 0.5em;
+  margin-top: 1em;
+}
+
+.quick-access:hover i{
+    transform: scale(1.5);
+}
+
+.quick-access:hover{
+    box-shadow: none;
 }

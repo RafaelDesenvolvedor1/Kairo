@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Global css -->
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <!-- Web Components -->
+    <script src="./js/components/MyHeader.js" defer></script>
+    <script src="./js/components/Logo.js" defer></script>
+    <script src="./js/components/User.js" defer></script>
+    <script src="./js/components/MyLink.js" defer></script>
+
+    <title>Kairo</title>
+  </head>
+  <body>
+    <section class="app">
+      <app-myheader bgColor="--background-primary"></app-myheader>
+      <div class="box-menu">
+        <a class="navbar-brand" href="./html/home.html" target="conteudo">
+          <app-logo size="1.5em"></app-logo>
+        </a>
+        <nav>
+          <app-mylink
+            href="./html/pacientes.html"
+            icon="fa-solid fa-users"
+            title="Pacientes"
+          >
+          </app-mylink>
+          <app-mylink
+            href="./html/financeiro.html"
+            icon="fa-solid fa-money-bill-trend-up"
+            title="Financeiro"
+          >
+          </app-mylink>
+          <app-mylink
+            href="./html/financeiro.html"
+            icon="fa-solid fa-calendar"
+            title="Agendamento"
+          >
+          </app-mylink>
+        </nav>
+      </div>
+
+      <iframe
+        name="conteudo"
+        src="./html/home.html"
+        frameborder="0"
+        id="conteudo"
+      ></iframe>
+      
+    </section>
     
-</body>
+  </body>
 </html>

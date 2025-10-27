@@ -1,36 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("../bootstrap-5.0.2-dist/css/bootstrap.min.css");
 
 :root {
-    /* estilos de font */
-    --font-title: "Montserrat", sans-serif;
-    --font-content: "Poppins", sans-serif;
-    --color-primary: #1c1c1c;
-    --color-secondary: #f3f3f3;
+  /* estilos de font */
+  --font-title: "Montserrat", sans-serif;
+  --font-content: "Poppins", sans-serif;
+  --color-primary: #1c1c1c;
+  --color-secondary: #f3f3f3;
 
-    /* paleta de cores */
-    --background-primary: #ccc;
-    --background-secondary: #e7e5e5;
+  /* paleta de cores */
+  --background-primary: #ccc;
+  --background-secondary: #e7e5e5;
+  --background-content:#f5f5f5;
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
-    font-family: var(--font-content);
-    color: var(--color-primary);
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: var(--font-content);
+  color: var(--color-primary);
 }
 
+.app {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* sidebar + conteúdo */
+  grid-template-rows: 90px 1fr; /* header + resto */
+  grid-template-areas:
+    "sidebar header"
+    "sidebar conteudo";
+  height: 100vh;
+}
+
+header {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+  grid-area: header;
+  position: relative;
+  box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.34);
+}
 
 .app-container {
-    display: flex;
-    min-height: 100vh;
-    background-color: var(--background-secondary);
+  display: flex;
+  min-height: 100dvh;
+  background-color: var(--background-secondary);
+  padding: 3em 1.5em;
+}
+
+a{
+  text-decoration: none;
+}
+
+.box-menu {
+  background-color: var(--background-primary);
+  padding: 1em;
+  grid-area: sidebar;
+  border: 1px solid rgba(0, 0, 0, 0.34);
+}
+
+#conteudo {
+  /* padding: 1em; */
+  grid-area: conteudo;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-secondary);
 }
 
 h1 {
-    font-family: var(--font-title);
-    margin-bottom: 2em;
+  font-family: var(--font-title);
+  margin-bottom: 2em;
 }
 
 button:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- global css -->
+    <link rel="stylesheet" href="/css/global.css" />
+
+    <!-- pacientes css  -->
+    <link rel="stylesheet" href="../css/pacientes.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Web Components -->
+    <script src="../js/components/CardFinanceiro.js" defer></script>
+    <script src="../js/components/ButtonPrimary.js" defer></script>
+    <script src="../js/components/ButtonSecondary.js" defer></script>
+    <script src="../js/components/WithoutRegistration.js" defer></script>
+    <title>financeiro</title>
+  </head>
+  <body>
+    <section class="app-container">
+      <div class="d-flex gap-2 align-items-center">
+        <p>Ordenar por:</p>
+        <app-button-secondary
+          title="Ordem alfabética"
+          text="Alfabética"
+        ></app-button-secondary>
+        <app-button-secondary
+          title="Filtrar registros"
+          text="Filtrar"
+        ></app-button-secondary>
+      </div>
+      <div
+        class="d-flex justify-content-end align-items-center pe-4 gap-4"
+        style="width: 100%"
+      >
+        <app-button-secondary
+          title="Exibir em grid"
+          icon="fa-solid fa-grip"
+        ></app-button-secondary>
+        <app-button-secondary
+          title="Exibir em coluna"
+          icon="fa-solid fa-grip-vertical"
+        ></app-button-secondary>
+        <app-button-secondary
+          title="Baixar relatório"
+          icon="fa-solid fa-download"
+        ></app-button-secondary>
+      </div>
+      <div class="mx-auto" style="width: auto">
+        <app-whithout-registration
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+          btnTitle=" Você ainda não cadastrou um paciente"
+          btnIcon="fa-solid fa-circle-plus"
+          btnText="Novo Paciente"
+        ></app-whithout-registration>
+      </div>
+    </section>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel" class="p-3">Novo Paciente</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">...</div>
+    </div>
+  </body>
+</html>
